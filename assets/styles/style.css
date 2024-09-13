@@ -187,13 +187,13 @@ header nav ul {
   align-items: center;
 }
 
-header nav ul li a {
+header > nav > ul > li > a {
   text-decoration: none;
   list-style: none;
   color: var(--primary-color);
 }
 
-header nav ul li a:hover {
+header > nav > ul > li > a:hover {
   color: var(--main-color);
 }
 
@@ -220,12 +220,11 @@ header nav ul li a:hover {
 
 main {
   font-weight: normal;
-  padding: 0 8em;
 }
 
 .about__section {
   display: flex;
-  padding-top: 4em;
+  padding: 4em 8em;
 }
 
 .about__section__description {
@@ -273,7 +272,7 @@ main {
 }
 
 .experience__section {
-  padding: 6em 0;
+  padding: 6em 8em;
 }
 
 .experience__section h2 {
@@ -315,7 +314,7 @@ main {
 }
 
 .tools__section {
-  padding: 6em 0;
+  padding: 6em 8em;
 }
 
 .tools__section h2 {
@@ -346,7 +345,7 @@ main {
 }
 
 .project__section {
-  padding: 6em 0;
+  padding: 6em 8em;
 }
 
 .project__section h2 {
@@ -432,17 +431,44 @@ main {
   animation: ease 2s;
 }
 
-.testimonial__section {
-  padding: 6em 0;
+footer {
+  padding: 6em 8em;
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-weight: normal;
 }
 
-.testimonial__section h2 {
+.contact__section h2 {
   font-weight: 700;
   font-size: 2em;
+  text-align: center;
 }
 
-.testimonial__section > p {
-  padding: 2em 0;
+.contact__section > p {
+  padding-top: 2em;
+  text-align: center;
+}
+
+.contact__section > ul {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+  justify-content: center;
+}
+
+.contact__section > ul > li > a > svg:hover {
+  fill: var(--main-color);
+}
+
+footer > p {
+  text-align: center;
+  color: var(--white-color);
+  padding-top: 2em;
+}
+
+footer > p > a {
+  color: var(--white-color);
+  text-decoration: underline;
 }
 
 aside {
