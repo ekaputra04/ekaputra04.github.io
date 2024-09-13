@@ -166,8 +166,6 @@ header {
   top: 0;
   padding: 1.5em 8em;
   align-items: center;
-
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.31);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.8px);
@@ -213,6 +211,9 @@ header > nav > ul > li > a:hover {
 
 .button__theme {
   border-radius: 100%;
+  padding: 0.5em;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
 }
 
 .download__cv {
@@ -227,7 +228,6 @@ header > nav > ul > li > a:hover {
   display: none;
 }
 
-/* Styling untuk sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -540,7 +540,18 @@ aside ul {
   gap: 1em;
 }
 
-/* Style for tablets and smaller screens */
+.scroll__to__top {
+  display: none;
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  display: flex;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  border-radius: 1em;
+  animation: ease-in-out 5s;
+}
+
 @media (max-width: 1024px) {
   body {
     font-size: 18px;

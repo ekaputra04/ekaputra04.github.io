@@ -1,8 +1,7 @@
-// Ambil elemen yang dibutuhkan
 const menuButton = document.querySelector(".menu__button");
 const sidebar = document.createElement("div");
+const scrollToTopBtn = document.querySelector(".scroll__to__top");
 
-// Buat sidebar dan isinya
 sidebar.classList.add("sidebar");
 sidebar.innerHTML = `
   <span class="close-btn">&times;</span>
@@ -15,16 +14,30 @@ sidebar.innerHTML = `
   </ul>
 `;
 
-// Tambahkan sidebar ke body
 document.body.appendChild(sidebar);
 
-// Fungsi untuk toggle sidebar
 menuButton.addEventListener("click", () => {
   sidebar.classList.toggle("active");
 });
 
-// Fungsi untuk close sidebar
 const closeButton = sidebar.querySelector(".close-btn");
 closeButton.addEventListener("click", () => {
   sidebar.classList.remove("active");
 });
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Scroll dengan efek smooth
+  });
+}
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+});
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
