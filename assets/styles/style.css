@@ -522,7 +522,7 @@ footer > p > a {
   text-decoration: underline;
 }
 
-aside {
+.media__sosial {
   position: fixed;
   right: 0;
   width: 3em;
@@ -534,7 +534,7 @@ aside {
   justify-content: center;
 }
 
-aside ul {
+.media__sosial ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
